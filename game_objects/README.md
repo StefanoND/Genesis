@@ -1,5 +1,11 @@
 # Game Objects
 
-Everything that will be in game (Camera, AI, Player, etc)
+All of the objects which are (will be) used in the game, or that extends other
+game objects.
 
-Entities: Everything that will be visible in game (Player, Interactables, etc)
+Some directories that might be used are:
+
+- ai
+- camera
+- pools/containers
+- modifiers (buffs/debuffs)

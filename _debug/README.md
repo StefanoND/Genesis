@@ -13,3 +13,7 @@ some particular scope or class. That’s roughly the idea by using it here.
 
 Nothing in \_debug is used to make game logic run, prepending the "\_" helps
 communicate that.
+
+This directory is specifically filtered out of game exports. This is only
+intended to be used in a dev environment. So there's no reason to include them
+in official release game builds.

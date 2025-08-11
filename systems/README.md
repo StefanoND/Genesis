@@ -1,3 +1,3 @@
 # Systems
 
-Systems, functionalities, features, etc of the game
+Systems, functionalities, features, etc of the game.
