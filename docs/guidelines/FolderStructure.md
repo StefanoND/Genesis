@@ -5,6 +5,83 @@ Inspired by:
 [Shantnu Tiwari](https://new.pythonforengineers.com/author/shantnu/)'s [How to structure your godot project so you don't get confused](https://new.pythonforengineers.com/blog/how-to-structure-your-godot-project-so-you-dont-get-confused/)
 [Josh Anthony](https://joshanthony.info/)'s [How I structure my game projects](https://joshanthony.info/2021/12/06/how-i-structure-my-game-projects/)
 
+## Folder structure example
+
+| Type                                   | Convention | Info                      |
+| -------------------------------------- | ---------- | ------------------------- |
+| Directory Names                        | PascalCase | MyFolder                  |
+| src Directory Name                     | N/A        | src                       |
+| docs Directory Name                    | N/A        | docs                      |
+| Test, Debug and Sample Directory Names | N/A        | \_test, \_debug, \_sample |
+
+All folders are PascalCase
+The only exceptions are:
+
+- src and docs folders (which must be like shown here)
+- \_test, \_debug and \_sample (which must be like shown here)
+
+Leave auto-generated folders and files as-is
+
+    /ProjectName
+    │
+    ├── _debug/                     # Debug Helper (Hand-made in-game debugger)
+    ├── _tests/                     # Tests (unit, integration)
+    ├── _sample/                    # Samples (System with their defaults for behavior check)
+    ├── Addons/                     # 3rd Party Content.
+    ├── Assets/                     # Resources to be used in the game
+    │   ├── 2D/                     # Art assets for 2D games
+    │   │   └── Sprites/            # Sprites
+    │   ├── 3D/                     # Art assets for 3D games
+    │   │   ├── Materials/          # Materials
+    │   │   ├── Models/             # 3D Models
+    │   │   └── Textures/           # Textures
+    │   ├── Animations/             # Animations in game
+    │   ├── Audio/                  # Audios for the game
+    │   │   ├── Sound/              # Sounds, effects, etc
+    │   │   ├── Voice/              # Voice acted audios
+    │   │   └── Music/              # Background music, game music, etc
+    │   ├── Effects/                # VFX
+    │   ├── Fonts/                  # Fonts used in the game
+    │   ├── Videos/                 # In-Game Videos, Cutscenes, etc
+    │   └── .../                    # Materials, 3D Models, Sprites, Videos, etc
+    ├── Bridges/                    # Connectors of systems
+    ├── Config/                     # Exposed configuration from systems
+    ├── Core/                       # Generalized and Reusable systems, etc
+    ├── docs/                       # Internal documentation
+    ├── GameObjects/                # Everything that will be in the game
+    │   ├── AI/                     # AI for the game (behavior/state tree)
+    │   ├── Camera/                 # Various cameras for the game
+    │   └── Entities/               # Objects that are rendered and seen in-game
+    │       ├── Characters/         # Objects that represent "live" beings
+    │       │   ├── NPCs/           # Non Playable Characters
+    │       │   │   ├── Companion/  # NPCs that helps the player
+    │       │   │   ├── Hostile/    # Hostile NPCs
+    │       │   │   ├── Neutral/    # Neutral/Friendly NPCs
+    │       │   │   ├── Quest/      # NPCs that gives quests
+    │       │   │   └── Special/    # Important NPCs
+    │       │   └── Player/         # Player Character
+    │       ├── Collectables/       # Objects that are collectable
+    │       ├── Consumables/        # Objects that are consumables
+    │       └── Interactables/      # Objects that are interactable
+    ├── GameWorld/                  # Levels, maps, areas, etc that will be in the game
+    ├── Helpers/                    # Libraries with generalized helper codes
+    ├── Screens/                    # Finalized Scenes that will be seen by the player
+    ├── src/                        # Source code
+    │   ├── core/                   # Domain models / business logic (DDD principles)
+    │   ├── infra/                  # Infrastructure (DB, network, external services)
+    │   ├── services/               # Use cases, workflows
+    │   └── api/                    # Web/API layer (routes, controllers)
+    ├── Systems/                    # Systems, features, etc of the game
+    ├── UI/                         # Generalized and Specific UIs
+    ├── Utils/                      # Dev tools/systems that won't be in the final game
+    ├── .../                        # Extra folder required for specific needs
+    ├── .env                        # Environment variables
+    ├── .gitignore
+    ├── .editorconfig
+    ├── .clang-format / .clang-tidy / .clangd / etc.
+    ├── README.md
+    └── package.json / pyproject.toml / etc.
+
 ## INIT
 
 Main Scene
@@ -29,23 +106,23 @@ Individual systems at their default state.
 
 Systems, features, functionalities, etc being worked on.
 
-### addons
+### Addons
 
 3rd-Party content.
 
-### assets
+### Assets
 
 Resources that are used in the game.
 
-### bridges
+### Bridges
 
 Connects systems together without affecting their reusability/modularity.
 
-### config
+### Config
 
 Exposed configurations from systems.
 
-### core
+### Core
 
 Generalized and Reusable systems, features, UIs, etc across multiple games.
 
@@ -53,30 +130,35 @@ Generalized and Reusable systems, features, UIs, etc across multiple games.
 
 Project's Documentations.
 
-### game_objects
+### GameObjects
 
 Everything that will be in the game.
 
-### game_world
+### GameWorld
 
 Levels, maps, areas, etc that will be in the game.
 
-### helpers
+### Helpers
 
 Libraries with generalized helper functions, vars, consts, etc.
+
+### Screens
+
+"Finished" games part that will be visualized by the player: Game Screen, Menu
+Screen, Loading Screen, etc
 
 ### src
 
 Where all scripts in the game are.
 
-### systems
+### Systems
 
 Systems, functionalities, features, etc of the game
 
-### ui
+### UI
 
 Generalized and Specific UIs
 
-### utils
+### Utils
 
 Anything that aids/helps with the development, that won't be in the final game.

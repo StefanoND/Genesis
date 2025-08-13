@@ -2,10 +2,3 @@
 
 All of the objects which are (will be) used in the game, or that extends other
 game objects.
-
-Some directories that might be used are:
-
-- ai
-- camera
-- pools/containers
-- modifiers (buffs/debuffs)

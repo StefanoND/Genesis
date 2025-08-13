@@ -8,19 +8,6 @@ philosophies for this
 Directories with separation of concerns and sub-directories with their
 respective specific concern like so:
 
-    /project_name
-    │
-    ├── docs/               # Internal documentation
-    ├── src/                # Source code
-    │   ├── core/           # Domain models / business logic (DDD principles)
-    │   ├── infra/          # Infrastructure (DB, network, external services)
-    │   ├── services/       # Use cases, workflows
-    │   └── api/            # Web/API layer (routes, controllers)
-    ├── tests/              # Tests (unit, integration)
-    ├── .env                # Environment variables
-    ├── .gitignore
-    ├── README.md
-    └── package.json / pyproject.toml / etc.
 
 ## Development cycle
 
@@ -60,7 +47,7 @@ respective specific concern like so:
 
 - Value in craftsmanship
 - Pride in workmanship
-- Kaizen (continuous improvement)
+- Kaizen (continuous improvement, improve 1% daily)
 - Treating code as a long-lasting artifact rather than a temporary feature
 
 ## Practices

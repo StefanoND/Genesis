@@ -1,11 +1,15 @@
-# Standards and Conventions
+# Coding Standards
 
 ## Folders
 
-| Type            | Convention | Info         |
-| --------------- | ---------- | ------------ |
-| Directory Names | snake_case | my_folder    |
-| File Names      | snake_case | my_script.gd |
+| Type            | Convention     | Info               |
+| --------------- | -------------- | ------------------ |
+| Directory Names | snake_case     | my_folder          |
+| GD Script Names | snake_case     | my_script.gd       |
+| C# Script Names | PascalCase     | MyScript.cs        |
+| Textures Files  | T_PascalCase   | T_Texture_01.png   |
+| Normal Files    | T_PascalCase_N | T_Texture_01_N.png |
+| Material Files  | M_PascalCase   | T_Texture_01_N.png |
 
 ## Coding
 
