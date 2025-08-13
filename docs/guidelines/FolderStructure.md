@@ -22,65 +22,69 @@ The only exceptions are:
 
 Leave auto-generated folders and files as-is
 
-    /ProjectName
+    /ProjectGenesis
     │
-    ├── _debug/                     # Debug Helper (Hand-made in-game debugger)
-    ├── _tests/                     # Tests (unit, integration)
-    ├── _sample/                    # Samples (System with their defaults for behavior check)
-    ├── Addons/                     # 3rd Party Content.
-    ├── Assets/                     # Resources to be used in the game
-    │   ├── 2D/                     # Art assets for 2D games
-    │   │   └── Sprites/            # Sprites
-    │   ├── 3D/                     # Art assets for 3D games
-    │   │   ├── Materials/          # Materials
-    │   │   ├── Models/             # 3D Models
-    │   │   └── Textures/           # Textures
-    │   ├── Animations/             # Animations in game
-    │   ├── Audio/                  # Audios for the game
-    │   │   ├── Sound/              # Sounds, effects, etc
-    │   │   ├── Voice/              # Voice acted audios
-    │   │   └── Music/              # Background music, game music, etc
-    │   ├── Effects/                # VFX
-    │   ├── Fonts/                  # Fonts used in the game
-    │   ├── Videos/                 # In-Game Videos, Cutscenes, etc
-    │   └── .../                    # Materials, 3D Models, Sprites, Videos, etc
-    ├── Bridges/                    # Connectors of systems
-    ├── Config/                     # Exposed configuration from systems
-    ├── Core/                       # Generalized and Reusable systems, etc
-    ├── docs/                       # Internal documentation
-    ├── GameObjects/                # Everything that will be in the game
-    │   ├── AI/                     # AI for the game (behavior/state tree)
-    │   ├── Camera/                 # Various cameras for the game
-    │   └── Entities/               # Objects that are rendered and seen in-game
-    │       ├── Characters/         # Objects that represent "live" beings
-    │       │   ├── NPCs/           # Non Playable Characters
-    │       │   │   ├── Companion/  # NPCs that helps the player
-    │       │   │   ├── Hostile/    # Hostile NPCs
-    │       │   │   ├── Neutral/    # Neutral/Friendly NPCs
-    │       │   │   ├── Quest/      # NPCs that gives quests
-    │       │   │   └── Special/    # Important NPCs
-    │       │   └── Player/         # Player Character
-    │       ├── Collectables/       # Objects that are collectable
-    │       ├── Consumables/        # Objects that are consumables
-    │       └── Interactables/      # Objects that are interactable
-    ├── GameWorld/                  # Levels, maps, areas, etc that will be in the game
-    ├── Helpers/                    # Libraries with generalized helper codes
-    ├── Screens/                    # Finalized Scenes that will be seen by the player
-    ├── src/                        # Source code
-    │   ├── core/                   # Domain models / business logic (DDD principles)
-    │   ├── infra/                  # Infrastructure (DB, network, external services)
-    │   ├── services/               # Use cases, workflows
-    │   └── api/                    # Web/API layer (routes, controllers)
-    ├── Systems/                    # Systems, features, etc of the game
-    ├── UI/                         # Generalized and Specific UIs
-    ├── Utils/                      # Dev tools/systems that won't be in the final game
-    ├── .../                        # Extra folder required for specific needs
-    ├── .env                        # Environment variables
-    ├── .gitignore
-    ├── .editorconfig
-    ├── .clang-format / .clang-tidy / .clangd / etc.
-    ├── README.md
-    └── package.json / pyproject.toml / etc.
+    ├─ docs/                        # Internal documentation
+    ├─ Project/                     # Actual Godot Project
+    │  │
+    │  ├─ \_debug/                  # Debug Helper (Hand-made in-game debugger)
+    │  ├─ \_tests/                  # Tests (unit, integration)
+    │  ├─ \_sample/                 # Samples (System with their defaults for behavior check)
+    │  ├─ Addons/                   # Addons and 3rd Party Content
+    │  ├─ Assets/                   # Resources to be used in the game
+    │  │  ├─ 2D/                    # Art assets for 2D games
+    │  │  │  └─ Sprites/            # Sprites
+    │  │  ├─ 3D/                    # Art assets for 3D games
+    │  │  │  ├─ Materials/          # Materials
+    │  │  │  ├─ Models/             # 3D Models
+    │  │  │  └─ Textures/           # Textures
+    │  │  ├─ Animations/            # Animations in game
+    │  │  ├─ Audio/                 # Audios for the game
+    │  │  │  ├─ Sound/              # Sounds, effects, etc
+    │  │  │  ├─ Voice/              # Voice acted audios
+    │  │  │  └─ Music/              # Background music, game music, etc
+    │  │  ├─ Effects/               # VFX
+    │  │  ├─ Fonts/                 # Fonts used in the game
+    │  │  ├─ Videos/                # In-Game Videos, Cutscenes, etc
+    │  │  └─ .../                   # Materials, 3D Models, Sprites, Videos, etc
+    │  ├─ Bridges/                  # Connectors of systems
+    │  ├─ Config/                   # Exposed configuration from systems
+    │  ├─ Core/                     # Generalized and Reusable systems, etc
+    │  ├─ GameObjects/              # Everything that will be in the game
+    │  │  ├─ AI/                    # AI for the game (behavior/state tree)
+    │  │  ├─ Camera/                # Various cameras for the game
+    │  │  └─ Entities/              # Objects that are rendered and seen in-game
+    │  │     ├─ Characters/         # Objects that represent "live" beings
+    │  │     │  ├─ NPCs/            # Non Playable Characters
+    │  │     │  │  ├─ Companion/    # NPCs that helps the player
+    │  │     │  │  ├─ Hostile/      # Hostile NPCs
+    │  │     │  │  ├─ Neutral/      # Neutral/Friendly NPCs
+    │  │     │  │  ├─ Quest/        # NPCs that gives quests
+    │  │     │  │  └─ Special/      # Important NPCs
+    │  │     │  └─ Player/          # Player Character
+    │  │     ├─ Collectables/       # Objects that are collectable
+    │  │     ├─ Consumables/        # Objects that are consumables
+    │  │     └─ Interactables/      # Objects that are interactable
+    │  ├─ GameWorld/                # Levels, maps, areas, etc that will be in the game
+    │  ├─ Helpers/                  # Libraries with generalized helper codes
+    │  ├─ Screens/                  # Finalized Scenes that will be seen by the player
+    │  ├─ src/                      # Source code, GD and C# Scripts
+    │  │  ├─ Consumables/
+    │  │  ├─ Characters/
+    │  │  │  └─ Player/
+    │  │  └─ Systems/
+    │  │     └─ System1/
+    │  ├─ Systems/                  # Systems, features, etc of the game
+    │  ├─ UI/                       # Generalized and Specific UIs
+    │  ├─ Utils/                    # Dev tools/systems that won't be in the final game
+    │  └─ .../                      # Extra folder required for specific needs
+    ├─ .env                         # Environment variables
+    ├─ .gitignore
+    ├─ .editorconfig
+    ├─ .clang-format / .clang-tidy / .clangd / etc.
+    ├─ README.md
+    ├─ package.json / pyproject.toml / etc.
+    └─ ToImport/                    # Raw "non optimized for game" files
 
 ## INIT
 
@@ -150,6 +154,9 @@ Screen, Loading Screen, etc
 ### src
 
 Where all scripts in the game are.
+
+Create a folder for each system, feature, etc and keep their Script type
+(GDScript or C# Script) per folder.
 
 ### Systems
 

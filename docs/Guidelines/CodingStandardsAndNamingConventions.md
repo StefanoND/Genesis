@@ -1,15 +1,15 @@
-# Coding Standards
+# Coding Standards and Naming Conventions
 
-## Folders
+Good to have this around for reference: [Godot API for C#](https://docs.godotengine.org/en/4.4/tutorials/scripting/c_sharp/c_sharp_differences.html)
 
-| Type            | Convention     | Info               |
-| --------------- | -------------- | ------------------ |
-| Directory Names | snake_case     | my_folder          |
-| GD Script Names | snake_case     | my_script.gd       |
-| C# Script Names | PascalCase     | MyScript.cs        |
-| Textures Files  | T_PascalCase   | T_Texture_01.png   |
-| Normal Files    | T_PascalCase_N | T_Texture_01_N.png |
-| Material Files  | M_PascalCase   | T_Texture_01_N.png |
+## File Names
+
+| Type        | Convention | Info         |
+| ----------- | ---------- | ------------ |
+| GD Script   | snake_case | my_script.gd |
+| C# Script   | PascalCase | MyScript.cs  |
+| Header File | PascalCase | MyScript.h   |
+| CPP File    | PascalCase | MyScript.cpp |
 
 ## Coding
 
@@ -31,9 +31,10 @@ Clang files and editorconfig will do most of the heavy lifting.
 
   Readable from all IDEs and Text Editors (vim, vscode, jetbrains' ide, etc)
   This is the closest to "one size fits all" I could find
-  Works for horizontal oriented monitors as well as vertical oriented
+  Works for horizontally oriented monitors as well as vertically oriented
   Works for laptops and their small screen real-estate
   No side-scrolling even with (a sane amount) of docked windows around
+  Forces less nested code
 
 - Self-documenting code may not be enough
 
@@ -41,7 +42,7 @@ Clang files and editorconfig will do most of the heavy lifting.
   and functions might need a little more information for understanding the
   code fully. Add comments where/when needed.
 
-- Use formatters and linters provided here to aid in your code
+- Use formatters and linters are provided here to aid in your code
 
   They'll do alot of the heavy-lifting for you but won't do everything for you.
 
@@ -89,14 +90,41 @@ Clang files and editorconfig will do most of the heavy lifting.
 20. public static methods
 21. private static methods
 
+### C\#
+
+[Roslyn style](https://github.com/dotnet/roslyn/blob/main/.editorconfig)
+
+1. using
+2. namespace
+
+3. class
+4. events
+5. enums
+6. constants
+7. exported variables
+8. public variables
+9. public static variables
+10. public onready variables\*
+11. private onready variables\*
+
+12. constructor
+13. virtual \_Ready() function/method
+14. virtual \_Process() function/method
+15. virtual \_PhysicsProcess() function/method
+16. remaining built-in virtual function/methods
+
+17. public functions/methods
+18. public static functions/methods
+
+19. private variables
+20. private static variables
+21. private functions/methods
+22. private static functions/methods
+
+- On ready variables must be initialized in "\_Ready()" function/method
+
 ### C/C++
 
 Godot's Coding Standard
 
 Microsoft style
-
-### C\#
-
-Godot's Coding Standard
-
-[Roslyn style](https://github.com/dotnet/roslyn/blob/main/.editorconfig)
