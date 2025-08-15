@@ -10,6 +10,7 @@ Inspired by:
 | Type                                   | Convention | Info                      |
 | -------------------------------------- | ---------- | ------------------------- |
 | Directory Names                        | PascalCase | MyFolder                  |
+| addons Directory Name                  | N/A        | addons                    |
 | src Directory Name                     | N/A        | src                       |
 | docs Directory Name                    | N/A        | docs                      |
 | Test, Debug and Sample Directory Names | N/A        | \_test, \_debug, \_sample |
@@ -30,7 +31,7 @@ Leave auto-generated folders and files as-is
     │  ├─ \_debug/                  # Debug Helper (Hand-made in-game debugger)
     │  ├─ \_tests/                  # Tests (unit, integration)
     │  ├─ \_sample/                 # Samples (System with their defaults for behavior check)
-    │  ├─ Addons/                   # Addons and 3rd Party Content
+    │  ├─ addons/                   # Plugins/3rd-Party Content. All lower case
     │  ├─ Assets/                   # Resources to be used in the game
     │  │  ├─ 2D/                    # Art assets for 2D games
     │  │  │  └─ Sprites/            # Sprites
